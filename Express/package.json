@@ -1,0 +1,22 @@
+{
+  "name": "exmpress",
+  "version": "1.0.0",
+  "description": "Iniciando com express",
+  "main": "aplicacaoHttp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardaarosaa/CursoNodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardaarosaa/CursoNodeJS/issues"
+  },
+  "homepage": "https://github.com/eduardaarosaa/CursoNodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
