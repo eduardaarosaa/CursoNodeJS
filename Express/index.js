@@ -11,16 +11,26 @@ app.get('/', function(req,res){
     res.send('Route principal');
 
 });
-
+//Querys params
 app.get('/galeria', function(req,res){
+    let photos = req.query["photos"];
     //Devolvendo uma resposta - sempre tem que devolver uma resposta.
-    res.send('Route galeria');
+    //Como chamar a route: http://localhost:4000/galeria?photos=img_001
+    res.send('Route galeria '+ photos);
 
 });
 //add ? a sintaxe do parametro faz com que ele se torne um parametro opcional
 app.get('/blog/:arquivo?', function(req,res){
-    //Devolvendo uma resposta - sempre tem que devolver uma resposta.
-    res.send('Route blog');
+    let arquivo = req.params.arquivo;
+
+    if(arquivo){
+        res.send('Route blog com arquivo' + arquivo);
+    }else{
+        //Devolvendo uma resposta - sempre tem que devolver uma resposta.
+        res.send('Route blog');
+    }
+    
+   
 
 });
 
