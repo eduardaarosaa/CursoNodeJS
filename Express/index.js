@@ -24,6 +24,14 @@ app.get('/blog', function(req,res){
 
 });
 
+//Route com parametro
+app.get('/perfil/:nome', function(req, res){
+    //REQ são os dados enviados para o usuario
+    //RES resposta que sera enviada para o usuario
+    let nome = req.params.nome;
+    res.send('Route com parametros ' + nome);
+});
+
 //Funcao para abrir um servidor Express
 // 4000 numero da porta que vai rodar o servidor
 app.listen(4000,function(erro){
