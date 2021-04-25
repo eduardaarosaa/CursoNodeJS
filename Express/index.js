@@ -17,19 +17,21 @@ app.get('/galeria', function(req,res){
     res.send('Route galeria');
 
 });
-
-app.get('/blog', function(req,res){
+//add ? a sintaxe do parametro faz com que ele se torne um parametro opcional
+app.get('/blog/:arquivo?', function(req,res){
     //Devolvendo uma resposta - sempre tem que devolver uma resposta.
     res.send('Route blog');
 
 });
 
 //Route com parametro
-app.get('/perfil/:nome', function(req, res){
+app.get('/perfil/:nome/:idade', function(req, res){
     //REQ são os dados enviados para o usuario
     //RES resposta que sera enviada para o usuario
     let nome = req.params.nome;
-    res.send('Route com parametros ' + nome);
+    let idade = req.params.idade;
+
+    res.send('Route com parametros ' + nome + ' Idade: ' + idade);
 });
 
 //Funcao para abrir um servidor Express
