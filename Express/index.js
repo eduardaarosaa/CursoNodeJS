@@ -16,7 +16,12 @@ app.get('/galeria', function(req,res){
     let photos = req.query["photos"];
     //Devolvendo uma resposta - sempre tem que devolver uma resposta.
     //Como chamar a route: http://localhost:4000/galeria?photos=img_001
-    res.send('Route galeria '+ photos);
+    if(photos){
+        res.send('Route galeria '+ photos);
+    }else{
+        res.send('Route galeria');
+    }
+   
 
 });
 //add ? a sintaxe do parametro faz com que ele se torne um parametro opcional
